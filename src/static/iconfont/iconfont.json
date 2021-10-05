@@ -1,0 +1,44 @@
+{
+  "id": "2849241",
+  "name": "music",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "仿网易云音乐",
+  "glyphs": [
+    {
+      "icon_id": "435934",
+      "name": "排行榜",
+      "font_class": "paixingbang",
+      "unicode": "e7bd",
+      "unicode_decimal": 59325
+    },
+    {
+      "icon_id": "4969926",
+      "name": "每日推荐-01",
+      "font_class": "meirituijian-",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "8798014",
+      "name": "直播",
+      "font_class": "zhibo",
+      "unicode": "e7d5",
+      "unicode_decimal": 59349
+    },
+    {
+      "icon_id": "11391498",
+      "name": "歌单",
+      "font_class": "gedan",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "24109704",
+      "name": "电台",
+      "font_class": "diantai",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
