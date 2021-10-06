@@ -5,8 +5,8 @@
 
     <!-- 用户信息 -->
     <view class="user_info">
-      <img class="portrait" src="../../static/images/personal/missing-face.png" alt="" />
-      <text class="username">游客</text>
+      <img class="portrait" :src="avatarUrl" @click="goLogin" />
+      <text class="username">{{ nickname }}</text>
     </view>
 
     <!-- 会员卡片模块 -->
@@ -56,6 +56,12 @@
         <view class="recentPlayContainer">
           <text class="title">最近播放</text>
           <!-- 最近播放记录 -->
+          <scroll-view v-if="weekDataList.length" class="recordScrollView" scroll-x enable-flex>
+            <view class="scroll-view-item" v-for="w in weekDataList" :key="w.song.id">
+              <img :src="w.song.al.picUrl" alt="" class="recordMusic" />
+            </view>
+          </scroll-view>
+          <view v-else class="wuRecord">暂无播放记录</view>
         </view>
 
         <!-- 我的列表 -->
@@ -86,7 +92,13 @@ export default {
       // 手指的初始化位置
       touchStartY: 0,
       // 用户主体盒子移动的距离
-      cover_container_moveY: ''
+      cover_container_moveY: '',
+      // 用户数据
+      avatarUrl: '../../static/images/personal/missing-face.png',
+      nickname: '游客',
+      userId: '',
+      // 最近一周播放的歌曲数据
+      weekDataList: []
     }
   },
   methods: {
@@ -98,16 +110,47 @@ export default {
       // 手指移动的距离(手指移动后的位置 - 手指的初始位置)
       let touchMoveY = e.touches[0].pageY - this.touchStartY
       // 控制不能向上滑动
-      if(touchMoveY <= 0) {
+      if (touchMoveY <= 0) {
         touchMoveY = 0
-      }else if(touchMoveY >= 100) {
+      } else if (touchMoveY >= 100) {
         touchMoveY = 100
       }
+      // 跟随手指移动
       this.cover_container_moveY = `transform: translateY(${touchMoveY}rpx)`
     },
     touch_end() {
+      // 手指离开回弹到原来的位置
       this.cover_container_moveY = `transform: translateY(0rpx); transition: all .2s;`
+    },
+    // 跳转到登录界面
+    goLogin() {
+      if (!uni.getStorageSync('userInfo')) {
+        uni.redirectTo({
+          url: '/pages/login/login'
+        })
+      }
+    },
+    // 获得用户数据
+    getUserInfo() {
+      let userInfo = {}
+      if (uni.getStorageSync('userInfo')) {
+        userInfo = JSON.parse(uni.getStorageSync('userInfo'))
+
+        this.avatarUrl = userInfo.avatarUrl
+        this.nickname = userInfo.nickname
+        this.userId = userInfo.userId
+
+        this.getUserRecord()
+      }
+    },
+    // 获取用户最近播放数据
+    async getUserRecord() {
+      const { data: res } = await this.$request('/user/record', { uid: this.userId })
+      this.weekDataList = res.weekData.slice(0, 15)
     }
+  },
+  mounted() {
+    this.getUserInfo()
   }
 }
 </script>
@@ -261,6 +304,25 @@ export default {
         font-size: 26rpx;
         color: #333;
         line-height: 80rpx;
+      }
+
+      .recordScrollView {
+        display: flex;
+        height: 160rpx;
+        padding-left: 5rpx;
+
+        .recordMusic {
+          width: 160rpx;
+          height: 160rpx;
+          border-radius: 10rpx;
+          margin-right: 10rpx;
+        }
+      }
+
+      .wuRecord {
+        padding-left: 20rpx;
+        font-size: 24rpx;
+        color: #333;
       }
     }
 
