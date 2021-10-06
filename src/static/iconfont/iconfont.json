@@ -6,6 +6,41 @@
   "description": "仿网易云音乐",
   "glyphs": [
     {
+      "icon_id": "24701603",
+      "name": "icon_huiyuan",
+      "font_class": "icon_huiyuan",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "2019095",
+      "name": "我的好友",
+      "font_class": "wodehaoyou",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
+    },
+    {
+      "icon_id": "3702066",
+      "name": "个性装扮",
+      "font_class": "grab",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6731292",
+      "name": "我的消息",
+      "font_class": "wodexiaoxi",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "8135700",
+      "name": "个人主页",
+      "font_class": "gerenzhuye",
+      "unicode": "e7ef",
+      "unicode_decimal": 59375
+    },
+    {
       "icon_id": "435934",
       "name": "排行榜",
       "font_class": "paixingbang",

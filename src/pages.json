@@ -1,7 +1,19 @@
 {
 	"pages": [
 		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "网抑云音乐"
+			}
+		},
+		{
 			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "网抑云音乐"
+			}
+		},
+		{
+			"path": "pages/video/video",
 			"style": {
 				"navigationBarTitleText": "网抑云音乐"
 			}
@@ -17,5 +29,30 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "网抑云音乐",
 		"navigationBarBackgroundColor": "#d43c33"
+	},
+	"tabBar":{
+		"color": "#aaa",
+		"selectedColor": "#d43c33",
+		"backgroundColor": "#fff",
+		"list":[
+			{
+				"pagePath": "pages/home/home",
+				"text": "主页",
+				"iconPath" : "./static/images/tabs/tab-home.png",
+				"selectedIconPath": "./static/images/tabs/tab-home-current.png"
+			},
+			{
+				"pagePath": "pages/video/video",
+				"text": "视频",
+				"iconPath" : "./static/images/tabs/select.png",
+				"selectedIconPath": "./static/images/tabs/selected.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "个人中心",
+				"iconPath" : "./static/images/tabs/tab-my.png",
+				"selectedIconPath": "./static/images/tabs/tab-my-current.png"
+			}
+		]
 	}
 }
