@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+			"path": "pages/video/video",
+			"style": {
+				"navigationBarTitleText": "网抑云音乐"
+			}
+		},
+		{
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "网抑云音乐"
@@ -14,12 +20,6 @@
 		},
 		{
 			"path": "pages/home/home",
-			"style": {
-				"navigationBarTitleText": "网抑云音乐"
-			}
-		},
-		{
-			"path": "pages/video/video",
 			"style": {
 				"navigationBarTitleText": "网抑云音乐"
 			}

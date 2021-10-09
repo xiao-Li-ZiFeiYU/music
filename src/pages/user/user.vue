@@ -23,7 +23,7 @@
       </view>
 
       <!-- 主体文本 -->
-      <text class="tips-t">Hello Vue and uni-app</text>
+      <text class="tips-t">Hello Vue and Uni-App</text>
       <text class="tips-b">开通畅听所有Vip歌曲！打代码更有劲！</text>
     </view>
 

@@ -2,5 +2,5 @@
 export default {
   host: 'http://localhost:3000',
   // 同一局域网可以真机体验
-  mobilehost: 'http://10.132.10.166:3000'
+  mobilehost: 'http://192.168.0.100:3000'
 }

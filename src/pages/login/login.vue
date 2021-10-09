@@ -71,7 +71,7 @@ export default {
       }
 
       // 验证通过调接口
-      const { data: res } = await this.$request('/login/cellphone', { phone: this.username, password: this.password })
+      const { data: res, cookies } = await this.$request('/login/cellphone', { phone: this.username, password: this.password })
 
       // 没有登录成功
       if (res.code !== 200) {
@@ -83,7 +83,7 @@ export default {
         return
       }
       // 登录成功，存储用户数据，再返回原界面
-      uni.setStorageSync('userInfo', JSON.stringify({ avatarUrl: res.profile.avatarUrl, nickname: res.profile.nickname, userId: res.profile.userId }))
+      uni.setStorageSync('userInfo', JSON.stringify({ avatarUrl: res.profile.avatarUrl, nickname: res.profile.nickname, userId: res.profile.userId, userCookies: cookies }))
       uni.switchTab({
         url: '/pages/user/user'
       })

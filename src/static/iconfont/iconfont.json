@@ -6,6 +6,13 @@
   "description": "仿网易云音乐",
   "glyphs": [
     {
+      "icon_id": "21208020",
+      "name": "搜索视频",
+      "font_class": "sousuoshipin",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
       "icon_id": "791869",
       "name": "密码",
       "font_class": "ai-password",
