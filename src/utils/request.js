@@ -9,7 +9,7 @@ export default (url, data = {}, cookie = '', method = 'GET') => {
   return new Promise((resolve, reject) => {
     uni.request({
       // 请求地址
-      url: config.mobilehost + url,
+      url: config.host + url,
       // 请求参数
       data,
       // 请求类型

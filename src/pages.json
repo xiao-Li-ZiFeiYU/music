@@ -1,6 +1,24 @@
 {
 	"pages": [
 		{
+			"path": "pages/home/navbar/recommendMusic/recommendMusic",
+			"style": {
+				"navigationBarTitleText": "每日推荐"
+			}
+		},
+		{
+			"path": "pages/playMusic/playMusic",
+			"style": {
+				"navigationBarTitleText": "音乐陪伴你每一天~"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "网抑云音乐"
+			}
+		},
+		{
 			"path": "pages/video/video",
 			"style": {
 				"navigationBarTitleText": "网抑云音乐"
@@ -16,12 +34,6 @@
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登录"
-			}
-		},
-		{
-			"path": "pages/home/home",
-			"style": {
-				"navigationBarTitleText": "网抑云音乐"
 			}
 		},
 		{

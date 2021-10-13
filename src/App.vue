@@ -1,14 +1,8 @@
 <script>
 export default {
-  onLaunch: function() {
-    console.log('App Launch')
-  },
-  onShow: function() {
-    console.log('App Show')
-  },
-  onHide: function() {
-    console.log('App Hide')
-  }
+  onLaunch: function() {},
+  onShow: function() {},
+  onHide: function() {}
 }
 </script>
 
@@ -20,7 +14,7 @@ page {
 
 /* 版心 */
 .w {
-	width: 730rpx;
-	margin: 0 auto;
+  width: 730rpx;
+  margin: 0 auto;
 }
 </style>

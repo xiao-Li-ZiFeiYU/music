@@ -2,7 +2,7 @@
   <view class="navbar_container">
     <!-- 导航栏模块 -->
     <ul class="navbar">
-      <li class="navbar_item">
+      <li class="navbar_item" @click="goRecommendMusic">
         <text class="iconfont icon-meirituijian-"></text>
         <text>每日推荐</text>
       </li>
@@ -28,7 +28,14 @@
 
 <script>
 export default {
-  name: 'navbar'
+  name: 'navbar',
+  methods: {
+    goRecommendMusic() {
+      uni.navigateTo({
+        url: '/pages/home/navbar/recommendMusic/recommendMusic'
+      })
+    }
+  }
 }
 </script>
 
